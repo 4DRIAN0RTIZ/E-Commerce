@@ -18,6 +18,10 @@
                         <label for="exampleInputPassword1" class="form-label">Contraseña</label>
                         <input type="password" name="password" class="form-control" id="exampleInputPassword1">
                     </div>
+                    <div class="mb-2">
+                        {!! NoCaptcha::renderJs('es-419', true, 'onloadCallback') !!}
+                        {!! NoCaptcha::display() !!}
+                    </div>
                     <button type="submit" class="btn btn-secondary">Registrarme</button>
                 </form>
             </div>
@@ -25,3 +29,9 @@
 
     </div>
 @endsection
+<script type="text/javascript">
+    var onloadCallback = function() {
+      alert("grecaptcha is ready!");
+    };
+  </script>
+  
