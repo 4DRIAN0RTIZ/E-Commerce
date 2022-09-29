@@ -15,7 +15,7 @@
                         <div class="col-sm-3">
                             <div class="">
                                 <h2>{{ $item->name }}</h2>
-                                <h5 class="cart-description">{{ $item->description }}</h5>
+                                <h5 class="cart-price"><strong>{{ $item->price }}</strong></h5>
                             </div>
                         </div>
                         <div class="col-sm-3">
@@ -24,7 +24,6 @@
                     </div>
                 @endforeach
             </div>
-            <a class="btn btn-success" href="ordernow">Comprar ahora</a><br><br>
         </div>
     </div>
 @endsection

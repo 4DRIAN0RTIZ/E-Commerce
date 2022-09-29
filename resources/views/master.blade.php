@@ -90,8 +90,9 @@ a:hover{
     width: 500px;
 }
 
-.cart-description{
-    font-size: 15px;
+.cart-price{
+    font-size: 20px;
+    color: green;
 }
 .cart-list-divisor{
     border-bottom: 1px solid rgb(121, 121, 121);
