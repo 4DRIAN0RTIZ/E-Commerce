@@ -77,20 +77,30 @@ class ProductController extends Controller
     {
         $userId = Session::get('user')['id'];
         $allCart = Cart::where('user_id', $userId)->get();
-        foreach ($allCart as $cart)
-        {
+        foreach ($allCart as $cart) {
             $order = new Order;
-            $order->product_id=$cart['product_id'];
-            $order->user_id=$cart['user_id'];
-            $order->status="Pendiente";
-            $order->payment_method=$req->payment;
-            $order->payment_status="Pendiente";
-            $order->address=$req->address;
+            $order->product_id = $cart['product_id'];
+            $order->user_id = $cart['user_id'];
+            $order->status = "Pendiente";
+            $order->payment_method = $req->payment;
+            $order->payment_status = "Pendiente";
+            $order->address = $req->address;
             $order->save();
 
             $allCart = Cart::where('user_id', $userId)->delete();
         }
         $req->input();
         return redirect(('/'));
+    }
+
+    function myOrder()
+    {
+        $userId = Session::get('user')['id'];
+        $orders = DB::table('orders')
+            ->join('products', 'orders.product_id', 'products.id')
+            ->where('orders.user_id', $userId)
+            ->get();
+
+        return view('myorders', ['orders' => $orders]);
     }
 }
