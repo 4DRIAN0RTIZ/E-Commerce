@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use App\Models\User;
-
+use Illuminate\Support\Facades\Validator;
 class UserController extends Controller
 {
     //
@@ -14,17 +14,22 @@ class UserController extends Controller
         $user = User::where(['email' => $req->email])->first();
         if (!$user || !Hash::check($req->password, $user->password)) 
         {
-            return "Usuario y contrasena no coinciden";
+            return redirect('/login');
         } else {
             $req->session()->put('user', $user);
             return redirect('/');
         }
     }
 
-    function register(Request $req){
+    public function register(Request $req){
 
-        //return $req->input();
+        //validación de los datos de registro
 
+        $req->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'password' => 'required'
+        ]);
         $user = new User;
         $user->name=$req->name;
         $user->email=$req->email;

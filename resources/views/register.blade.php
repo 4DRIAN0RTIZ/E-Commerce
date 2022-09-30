@@ -6,20 +6,34 @@
                 <form action="register" method="POST">
                     @csrf
                     <div class="mb-2">
-                        <label for="exampleInputEmail1" class="form-label">Nombre</label>
-                        <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label class="form-label">Nombre</label>
+                        <input type="text" name="name" class="form-control">
+                        @error('name')
+                            <br>
+                            <small>*{{$message}}</small>
+                            <br>
+                        @enderror
                     </div>
                     <div class="mb-2">
                         <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-                        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">Nunca compartiremos tu correo con nadie.</div>
+                        <input type="email" name="email" class="form-control">
+                        @error('email')
+                            <br>
+                            <small>*{{$message}}</small>
+                            <br>
+                        @enderror
                     </div>
                     <div class="mb-2">
                         <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                        <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+                        <input type="password" name="password" class="form-control">
+                        @error('password')
+                            <br>
+                            <small>*{{$message}}</small>
+                            <br>
+                        @enderror
                     </div>
                     <div class="mb-2">
-                        {!! NoCaptcha::renderJs('es-419', true, 'onloadCallback') !!}
+                        {!! NoCaptcha::renderJs('es-419', false, 'onloadCallback') !!}
                         {!! NoCaptcha::display() !!}
                     </div>
                     <button type="submit" class="btn btn-secondary">Registrarme</button>
