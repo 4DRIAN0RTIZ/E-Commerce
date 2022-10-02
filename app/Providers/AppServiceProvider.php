@@ -3,6 +3,10 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Facades\Schema;
+>>>>>>> f749806 (3.0ValidatedData)
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -14,6 +18,10 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         //
+<<<<<<< HEAD
+=======
+        Schema::defaultStringLength(191);
+>>>>>>> f749806 (3.0ValidatedData)
     }
 
     /**
@@ -23,6 +31,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+<<<<<<< HEAD
         //
+=======
+>>>>>>> f749806 (3.0ValidatedData)
     }
 }

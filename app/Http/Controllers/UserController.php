@@ -26,10 +26,18 @@ class UserController extends Controller
         //validación de los datos de registro
 
         $req->validate([
+<<<<<<< HEAD
             'name' => 'required',
             'email' => 'required',
             'password' => 'required'
         ]);
+=======
+            'name' => ['required'],
+            'email' => ['required','unique:users,email'],
+            'password' => ['required', 'confirmed']
+        ]);
+
+>>>>>>> f749806 (3.0ValidatedData)
         $user = new User;
         $user->name=$req->name;
         $user->email=$req->email;
