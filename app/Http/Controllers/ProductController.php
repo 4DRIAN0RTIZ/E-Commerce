@@ -75,15 +75,12 @@ class ProductController extends Controller
     }
     function orderPlace(Request $req)
     {
-<<<<<<< HEAD
-=======
 
         $req->validate([
             'address' => ['required'],
             'payment' => ['required']
         ]);
 
->>>>>>> f749806 (3.0ValidatedData)
         $userId = Session::get('user')['id'];
         $allCart = Cart::where('user_id', $userId)->get();
         foreach ($allCart as $cart) {

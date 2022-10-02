@@ -15,15 +15,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-=======
+
     <!--<script src="https://www.google.com/recaptcha/api.js" async defer></script>-->
->>>>>>> f749806 (3.0ValidatedData)
-=======
+
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
->>>>>>> eb48fb0 (ValidateCaptchaWorkedV5.0)
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">

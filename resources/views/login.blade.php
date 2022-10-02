@@ -8,10 +8,6 @@
                         @csrf
                         <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
                         <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-<<<<<<< HEAD
-                        <div id="emailHelp" class="form-text">Nunca compartiremos tu correo con nadie.</div>
-=======
->>>>>>> f749806 (3.0ValidatedData)
                     </div>
                     <div class="mb-2">
                         <label for="exampleInputPassword1" class="form-label">Contraseña</label>
