@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer style="clear:both;" class="text-center text-lg-start bg-light text-muted">
+<footer style="clear: both; margin-top: 75px;" class="text-center text-lg-start bg-light text-muted">
     
       <!-- Right -->
       <div>

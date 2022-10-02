@@ -34,7 +34,8 @@ class UserController extends Controller
 =======
             'name' => ['required'],
             'email' => ['required','unique:users,email'],
-            'password' => ['required', 'confirmed']
+            'password' => ['required', 'confirmed'],
+            'g-recaptcha-response' => 'required|captcha'
         ]);
 
 >>>>>>> f749806 (3.0ValidatedData)

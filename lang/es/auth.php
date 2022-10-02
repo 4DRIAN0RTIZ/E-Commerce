@@ -14,7 +14,14 @@ return [
     */
 
     'failed' => 'Estas credenciales no coinciden con nuestros registros.',
+<<<<<<< HEAD
     'password' => 'Contraseña incorrecta',
     'throttle' => 'Demasiados intentos de acceso. Por favor inténtelo de nuevo en :seconds segundos.',
 
 ];
+=======
+    'password' => 'La contraseña proporcionada no es correcta.',
+    'throttle' => 'Demasiados intentos de acceso. Por favor inténtelo de nuevo en :seconds segundos.',
+
+];
+>>>>>>> eb48fb0 (ValidateCaptchaWorkedV5.0)

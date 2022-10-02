@@ -16,4 +16,8 @@ return [
     'previous' => '&laquo; Anterior',
     'next'     => 'Siguiente &raquo;',
 
+<<<<<<< HEAD
 ];
+=======
+];
+>>>>>>> eb48fb0 (ValidateCaptchaWorkedV5.0)
