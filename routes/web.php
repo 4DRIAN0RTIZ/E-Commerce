@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
+use Laravel\Socialite\Facades\Socialite;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,9 +22,36 @@ Route::get('/login', function () {
     return view('login');
 });
 Route::get('/logout', function () {
-    Session::forget('user');
+    Auth::logout();
     return redirect('login');
 });
+
+Route::get('/login-google', function () {
+    return Socialite::driver('google')->redirect();
+});
+ 
+Route::get('/google-callback', function () {
+    $user = Socialite::driver('google')->user();
+    
+    $userExists = User::where('external_id', $user->id)->where('external_auth','google')->first();
+    if($userExists){
+        Auth::login($userExists);
+        
+        return redirect('/login');
+    } else {
+        $userNew = User::create([
+            'name' => $user -> name,
+            'email' => $user -> email,
+            'external_id' => $user -> id,
+            'external_auth' => 'google'
+        ]);
+
+        Auth::login($userNew);
+    }
+
+    return redirect('/');
+});
+
 
 Route::view('/register','register');
 Route::post("/login",[UserController::class,'login']);

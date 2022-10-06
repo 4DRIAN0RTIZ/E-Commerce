@@ -6,17 +6,11 @@
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
-<<<<<<< HEAD
-<<<<<<< HEAD
         "anhskohbo/no-captcha": "^3.4",
-=======
->>>>>>> f749806 (3.0ValidatedData)
-=======
-        "anhskohbo/no-captcha": "^3.4",
->>>>>>> eb48fb0 (ValidateCaptchaWorkedV5.0)
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
+        "laravel/socialite": "^5.5",
         "laravel/tinker": "^2.7"
     },
     "require-dev": {

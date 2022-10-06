@@ -28,7 +28,7 @@
                     </div>
                     <div>
                         <label for="exampleInputPassword1" class="form-label">Confirmar contraseña</label>
-                        <input type="password" name="password_confirmation" class="form-control">
+                        <input type="password" name="password_confirmation" class="form-control"><br>
                         @error('password')
                             <br>
                             <small style="color:red;">*{{$message}}</small>
@@ -42,14 +42,19 @@
                             <br>
                         @enderror
                     </div>
-                    <button type="submit" class="btn btn-secondary">Registrarme</button>
+                    <div class="d-grid gap-2 col-12 mx-auto">
+                    <button type="submit" class="btn btn-outline-secondary">Registrarme</button><hr>
+                    <a href="/login-google" style="width: 100%;" class="btn login-with-google-btn">Ingresar con Google</a>
+                </div>
                 </form>
             </div>
         </div>
+    </div><br><br>
 <script type="text/javascript">
     var onloadCallback = function() {
 
     };
   </script>
+  <br>
 @endsection
 

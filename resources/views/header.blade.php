@@ -1,7 +1,9 @@
 <?php
 use App\Http\Controllers\ProductController;
+use Illuminate\Support\Facades\Auth;
 $total = 0;
-if (Session::has('user')) {
+
+if (Auth::check()) {
     $total = ProductController::cartItem();
 }
 ?>
@@ -24,26 +26,28 @@ if (Session::has('user')) {
                     </li>
                 
                 <form action="/search" class="d-flex" role="search">
-                    <input class="form-control me-2 search-box" name="query" type="search" placeholder="Búsqueda"
+                    <input class="form-control me-4 search-box" name="query" type="search" placeholder="Búsqueda"
                         aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Buscar</button>
                 </form>
             </ul>
             <ul class="nav nav-bar navbar-right">
-                @if (Session::has('user'))
+                @if (Auth::check())
                     <li class="nav-item"><a class="nav-link active" href="/cartlist">Carrito({{ $total }})</a>
                     </li>
                 @endif
-                @if (Session::has('user'))
+                @if (Auth::check())
+                @if (Auth::user())
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            {{ Session::get('user')['name'] }}
+                            {{ Auth::user()->name }}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="/logout">Salir</a></li>
                         </ul>
                     </li>
+                @endif
                 @else
                     <li class="nav-item"><a class="nav-link active" href="/login">Ingresar</a></li>
                     <li class="nav-item"><a class="nav-link active" href="/register">Registrarse</a></li>
