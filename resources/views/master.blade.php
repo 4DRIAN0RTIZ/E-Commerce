@@ -2,6 +2,14 @@
 <html lang="en">
 
 <head>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
+    
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
+    
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -71,6 +79,13 @@
         padding-top: 100px;
     }
     .custom-register {
+        height: 500px;
+        padding-top: 50px;
+    }
+
+    .custom-contact-map {
+        margin-top: 5%;
+        margin-bottom: -10%;
         height: 500px;
         padding-top: 50px;
     }
