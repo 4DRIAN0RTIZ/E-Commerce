@@ -14,6 +14,13 @@
         :interactive="true"
         :markers="[['long' => -103.3424851, 'lat' => 20.6780543,'description' => 'La Consentida']]"
         :zoom="15"/>
+        <div>
+            <p>               Prueba
+            </p>
+
+
+
+        </div>
     </div>
   </div>
 </div>

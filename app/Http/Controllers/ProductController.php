@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Cart;
 use App\Models\Order;
-use Session;
 use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
@@ -102,15 +102,28 @@ class ProductController extends Controller
 
     function myOrder()
     {
-        if (Auth::check()){
-        $userId = Auth::user()->id;
-        $orders = DB::table('orders')
-            ->join('products', 'orders.product_id', 'products.id')
-            ->where('orders.user_id', $userId)
-            ->get();} else{
-                return redirect('/login');
-            }
+        if (Auth::check()) {
+            $userId = Auth::user()->id;
+            $orders = DB::table('orders')
+                ->join('products', 'orders.product_id', 'products.id')
+                ->where('orders.user_id', $userId)
+                ->get();
+        } else {
+            return redirect('/login');
+        }
 
         return view('myorders', ['orders' => $orders]);
+    }
+
+    public function Print()
+    {
+            $userId = Auth::user()->id;
+            $orders = DB::table('orders')
+                ->join('products', 'orders.product_id', 'products.id')
+                ->where('orders.user_id', $userId)
+                ->get();
+            $pdf = PDF::loadView('pdfreport', compact('orders'));
+            return $pdf->stream();
+
     }
 }
