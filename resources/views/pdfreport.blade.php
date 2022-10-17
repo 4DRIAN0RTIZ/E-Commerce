@@ -51,11 +51,10 @@
                         <tr>
                             <td>
                                 <div class="">
-                                    De
                                     <address>
                                         <strong>La Consentida</strong><br>
                                         Independencia 55<br>
-                                        Email: 2121100617@soy.utj.edu.mx
+                                        2121100617@soy.utj.edu.mx
                                     </address>
                                 </div>
                             </td>
@@ -63,13 +62,15 @@
 
                             </td>
                             <td>
-                                <div class="text-right">
-                                    @foreach ($orders as $item)
+                               {{--  <div class="text-right">
 
-                                    <b>Orden N {{ $item->id }}</b><br>
-                                    Recibo de Pago
-                                    @endforeach
-                                </div>
+@foreach ($orders as $num)
+
+<b>Orden N {{ $num->id }}</b><br>
+@endforeach
+
+
+                                </div> --}}
                             </td>
                         </tr>
                     </table>
@@ -88,33 +89,36 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($orders as $item)
                             <tr>
-                                <td>{{ $item->id }}</td>
-                                <td>{{ $item->name }}</td>
+
+                            <td>{{ $item->id }}</td>
+                            <td>{{ $item->name }}</td>
                                 <td>{{ $item->description }}</td>
                                 <td class="text-right">${{ $item->price }}</td>
                             </tr>
                             <tr>
+                                @endforeach
                                 <td colspan="3" class="text-right">Sub Total</td>
-                                <td class="text-right"><strong>&#8377; 1000</td>
-                            </tr>
-                            <tr>
-                                <td colspan="3" class="text-right">TAX (18%)</td>
-                                <td class="text-right"><strong>&#8377; 180</strong></td>
-                            </tr>
-                            <tr>
-                                <td colspan="3" class="text-right">Total Payable</td>
-                                <td class="text-right"><strong>&#8377; 1180</strong></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                                <td class="text-right"><strong>$ {{ $total }}</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="text-right">IVA (16%)</td>
+                                    <td class="text-right"><strong>${{ $total * .16 }}</strong></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="text-right">Total a pagar</td>
+                                    <td class="text-right"><strong>${{ ($total * .16) + $total }}</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
                 <!-- /.col -->
             </div>
             <br><br><br>
             <div>
-                <small><small>NOTE: This is system generate invoice no need of signature</small></small>
+                <small><small>NOTA: Para este comprobante no se necesita firma.</small></small>
             </div>
         </div>
     </div>

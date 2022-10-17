@@ -122,7 +122,11 @@ class ProductController extends Controller
                 ->join('products', 'orders.product_id', 'products.id')
                 ->where('orders.user_id', $userId)
                 ->get();
-            $pdf = PDF::loadView('pdfreport', compact('orders'));
+                $total = DB::table('orders')
+            ->join('products', 'orders.product_id', 'products.id')
+            ->where('orders.user_id', $userId)
+            ->sum('products.price');
+            $pdf = PDF::loadView('pdfreport', compact('orders','total'));
             return $pdf->stream();
 
     }
