@@ -1,14 +1,12 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-
     <style>
         body{
             font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace !important;
             letter-spacing: -0.3px;
         }
         .invoice-wrapper{ width: 700px; margin: auto; }
-        .nav-sidebar .nav-header:not(:first-of-type){ padding: 1.7rem 0rem .5rem; }
         .logo{ font-size: 50px; }
         .sidebar-collapse .brand-link .brand-image{ margin-top: -33px; }
         .content-wrapper{ margin: auto !important; }
@@ -20,8 +18,6 @@
         td{ padding: 10px; vertical-align: top; }
         .row{ display: block; clear: both; }
         .text-right{ text-align: right; }
-        .table-hover thead tr{ background: #eee; }
-        .table-hover tbody tr:nth-child(even){ background: #fbf9f9; }
         address{ font-style: normal; }
     </style>
 </head>
@@ -33,12 +29,10 @@
                     <table class="table">
                         <tr>
                             <td>
-                                <h4>
-                                    <span class="">La Consentida</span>
-                                </h4>
+                                <img width="50px" height="50px" src="{{asset ('logo.png')}}">
                             </td>
                             <td class="text-right">
-                                <strong>Fecha: </strong>
+                                <p><strong>Emitida: {{ $date }}</strong></p>
                             </td>
                         </tr>
                     </table>

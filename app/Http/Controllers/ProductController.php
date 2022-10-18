@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
@@ -116,7 +117,8 @@ class ProductController extends Controller
     }
 
     public function Print()
-    {
+    {   
+            $date = Carbon::now();
             $userId = Auth::user()->id;
             $orders = DB::table('orders')
                 ->join('products', 'orders.product_id', 'products.id')
@@ -126,7 +128,7 @@ class ProductController extends Controller
             ->join('products', 'orders.product_id', 'products.id')
             ->where('orders.user_id', $userId)
             ->sum('products.price');
-            $pdf = PDF::loadView('pdfreport', compact('orders','total'));
+            $pdf = PDF::loadView('pdfreport', compact('orders','total','date'));
             return $pdf->stream();
 
     }
