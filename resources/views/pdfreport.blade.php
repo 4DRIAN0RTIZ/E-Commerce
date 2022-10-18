@@ -29,10 +29,10 @@
                     <table class="table">
                         <tr>
                             <td>
-                                <img width="50px" height="50px" src="{{asset ('logo.png')}}">
-                            </td>
+                                <img src="https://i.ibb.co/PGHR0tp/logo.png" width="50px" height="50px">
+                            <td>
                             <td class="text-right">
-                                <p><strong>Emitida: {{ $date }}</strong></p>
+                                <p><strong>Emisión: {{ $date }}</strong></p>
                             </td>
                         </tr>
                     </table>
@@ -53,7 +53,6 @@
                                 </div>
                             </td>
                             <td>
-
                             </td>
                             <td>
                                {{--  <div class="text-right">
@@ -112,6 +111,7 @@
             </div>
             <br><br><br>
             <div>
+                <div><img src="data:image/png;base64,{{ base64_encode(QrCode::size(100)->generate('This its a test')) }}"</div>
                 <small><small>NOTA: Para este comprobante no se necesita firma.</small></small>
             </div>
         </div>
