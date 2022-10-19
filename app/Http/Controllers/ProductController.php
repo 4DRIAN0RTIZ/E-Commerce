@@ -101,10 +101,7 @@ class ProductController extends Controller
             $allCart = Cart::where('user_id', $userId)->delete();
         }
         $req->input();
-        return redirect(('/'));
-    }
-
-    function myOrder()
+        return redirect(('/')); } function myOrder()
     {
         if (Auth::check()) {
             $userId = Auth::user()->id;
@@ -121,7 +118,9 @@ class ProductController extends Controller
 
     public function Print()
     {
-            $date = Carbon::now('');
+        $date = Carbon::now('America/Mexico_City');
+            $userMail = Auth::user()->email;
+            $userName = Auth::user()->name;
             $userId = Auth::user()->id;
             $orders = DB::table('orders')
                 ->join('products', 'orders.product_id', 'products.id')
@@ -131,7 +130,7 @@ class ProductController extends Controller
             ->join('products', 'orders.product_id', 'products.id')
             ->where('orders.user_id', $userId)
             ->sum('products.price');
-            $pdf = PDF::loadView('pdfreport', compact('orders','total','date'));
+            $pdf = PDF::loadView('pdfreport', compact('orders','total','date','userMail','userName'));
             return $pdf->stream();
     }
 }

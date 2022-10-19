@@ -32,7 +32,7 @@
                                 <img src="https://i.ibb.co/PGHR0tp/logo.png" width="50px" height="50px">
                             <td>
                             <td class="text-right">
-                                <p><strong>Emisión: {{ $date }}</strong></p>
+                                <p><strong>Emisión: </strong> {{ $date }}</p>
                             </td>
                         </tr>
                     </table>
@@ -47,8 +47,8 @@
                                 <div class="">
                                     <address>
                                         <strong>La Consentida</strong><br>
-                                        Independencia 55<br>
-                                        2121100617@soy.utj.edu.mx
+                                        <strong>Cliente: {{ $userName }}</strong><br>
+                                        <strong>Correo: {{ $userMail }}</strong>
                                     </address>
                                 </div>
                             </td>
