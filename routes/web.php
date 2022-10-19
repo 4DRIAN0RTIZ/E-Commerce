@@ -21,6 +21,9 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/login', function () {
     return view('login');
 });
+
+Route::get('/logout', function () {
+Route::get('/logout', function () {
 Route::get('/logout', function () {
     Auth::logout();
     return redirect('login');
