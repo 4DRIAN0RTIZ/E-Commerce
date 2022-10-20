@@ -23,8 +23,6 @@ Route::get('/login', function () {
 });
 
 Route::get('/logout', function () {
-Route::get('/logout', function () {
-Route::get('/logout', function () {
     Auth::logout();
     return redirect('login');
 });
@@ -77,6 +75,8 @@ Route::get('/google-callback', function () {
     return redirect('/');
 });
 
+
+Route::view('/dashboard','dashboard');
 Route::view('/contact','contact');
 Route::view('/register','register');
 Route::post("/login",[UserController::class,'login']);
@@ -91,3 +91,7 @@ Route::get("ordernow",[ProductController::class,'orderNow']);
 Route::post("orderplace",[ProductController::class,'orderPlace']);
 Route::get("myorders",[ProductController::class,'myOrder']);
 Route::get("pdfreport",[ProductController::class,'Print']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
