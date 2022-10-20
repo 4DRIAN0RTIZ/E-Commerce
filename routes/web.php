@@ -21,9 +21,6 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/login', function () {
     return view('login');
 });
-
-Route::get('/logout', function () {
-Route::get('/logout', function () {
 Route::get('/logout', function () {
     Auth::logout();
     return redirect('login');
@@ -77,6 +74,7 @@ Route::get('/google-callback', function () {
     return redirect('/');
 });
 
+Route::view('/dashboard','dashboard');
 Route::view('/contact','contact');
 Route::view('/register','register');
 Route::post("/login",[UserController::class,'login']);
