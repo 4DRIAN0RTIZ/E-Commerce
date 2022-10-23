@@ -2,23 +2,10 @@
 <html lang="en">
 
 <head>
-<<<<<<< HEAD
-    <link href="/css/sb-admin-2.min.css" rel="stylesheet">
-    <link href="/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-    rel="stylesheet">
-=======
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <link href="css/all.min.css" rel="stylesheet" type="text/css">
->>>>>>> dashboard
+
     <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
-<<<<<<< HEAD
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js" integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-=======
-
->>>>>>> dashboard
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
 
@@ -49,8 +36,8 @@
     </script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-        @vite(['resources/css/app.css']);
-        @vite(['resources/js/app.js']);
+        @vite(['resources/css/app.css'])
+        @vite(['resources/js/app.js'])
 </head>
 
 <body>
@@ -62,7 +49,7 @@
 </body>
 
 
-<style>
+{{-- <style>
     /*Start google*/
     .login-with-google-btn {
   transition: background-color .3s, box-shadow .3s;
@@ -163,7 +150,7 @@ a:hover{
     margin-bottom: 20px;
     padding-bottom: 20px;
 }
-</style>
+</style> --}}
 
 <!-- <script>
     $(document).ready(function() {

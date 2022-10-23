@@ -2,9 +2,12 @@
 @import url('https://fonts.bunny.net/css?family=Nunito');
 
 // Variables
-@import 'variables';
+@import 'variables.scss';
+@import 'app.css';
 
 // Bootstrap
-@import 'bootstrap/scss/bootstrap';
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
 
-@import '@fortawesome/fontawesome-free/css/all.min.css';
+@import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+
+

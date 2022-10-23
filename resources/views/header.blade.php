@@ -8,7 +8,7 @@ if (Auth::check()) {
 }
 ?>
 
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-gradient-primary">
     <div class="container-fluid">
         <a class="navbar-brand" style="font-family: 'Petit Formal Script', cursive;" href="/">La consentida</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -20,11 +20,11 @@ if (Auth::check()) {
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="/">Inicio</a>
                 </li>
-                
+
                     <li class="nav-item">
                         <a class="nav-link" href="/myorders">Ordenes</a>
                     </li>
-                
+
                 <form action="/search" class="d-flex" role="search">
                     <input class="form-control me-4 search-box" name="query" type="search" placeholder="Búsqueda"
                         aria-label="Search">

@@ -17,12 +17,7 @@ use Illuminate\Support\Facades\DB;
 class ProductController extends Controller
 {
     //
-<<<<<<< HEAD
-    
-        function index()
-=======
     function index()
->>>>>>> dashboard
     {
         $data = Product::all();
         return view('product', ['products' => $data]);

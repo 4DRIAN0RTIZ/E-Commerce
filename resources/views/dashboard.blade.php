@@ -1,25 +1,7 @@
 @extends('master')
-<<<<<<< HEAD
-=======
 
-<head>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
-    </script>
-    <link href="/css/sb-admin-2.min.css" rel="stylesheet">
-    <link href="/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
-    </script>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
-        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
-</head>
-
->>>>>>> dashboard
-<body id="page-top">
+    @section('content')
 
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -28,12 +10,12 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+           {{--  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('home') }}">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
                 <div class="sidebar-brand-text mx-3">La consentida <sup>+</sup></div>
-            </a>
+            </a> --}}
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
@@ -140,18 +122,13 @@
             </div>
 
             <!-- Sidebar Message -->
-            <div class="sidebar-card d-none d-lg-flex">
+            {{-- <div class="sidebar-card d-none d-lg-flex">
                 <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
-<<<<<<< HEAD
-                <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
-                <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
-=======
                 <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components,
                     and more!</p>
                 <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to
                     Pro!</a>
->>>>>>> dashboard
-            </div>
+            </div> --}}
 
         </ul>
         <!-- End of Sidebar -->
@@ -163,7 +140,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+               {{--  <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -174,13 +151,8 @@
                     <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
-<<<<<<< HEAD
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-=======
                             <input type="text" class="form-control bg-light border-0 small"
                                 placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
->>>>>>> dashboard
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="button">
                                     <i class="fas fa-search fa-sm"></i>
@@ -238,12 +210,8 @@
                                     </div>
                                     <div>
                                         <div class="small text-gray-500">December 12, 2019</div>
-<<<<<<< HEAD
-                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
-=======
                                         <span class="font-weight-bold">A new monthly report is ready to
                                             download!</span>
->>>>>>> dashboard
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -268,12 +236,8 @@
                                         Spending Alert: We've noticed unusually high spending for your account.
                                     </div>
                                 </a>
-<<<<<<< HEAD
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
-=======
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Show All
                                     Alerts</a>
->>>>>>> dashboard
                             </div>
                         </li>
 
@@ -293,12 +257,7 @@
                                 </h6>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-<<<<<<< HEAD
-                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
-                                            alt="...">
-=======
                                         <img class="rounded-circle" src="img/undraw_profile_1.svg" alt="...">
->>>>>>> dashboard
                                         <div class="status-indicator bg-success"></div>
                                     </div>
                                     <div class="font-weight-bold">
@@ -309,12 +268,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-<<<<<<< HEAD
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
-                                            alt="...">
-=======
                                         <img class="rounded-circle" src="img/undraw_profile_2.svg" alt="...">
->>>>>>> dashboard
                                         <div class="status-indicator"></div>
                                     </div>
                                     <div>
@@ -325,34 +279,20 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-<<<<<<< HEAD
-                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
-                                            alt="...">
-                                        <div class="status-indicator bg-warning"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Last month's report looks great, I am very happy with
-=======
                                         <img class="rounded-circle" src="img/undraw_profile_3.svg" alt="...">
                                         <div class="status-indicator bg-warning"></div>
                                     </div>
                                     <div>
                                         <div class="text-truncate">Last month's report looks great, I am very happy
                                             with
->>>>>>> dashboard
                                             the progress so far, keep up the good work!</div>
                                         <div class="small text-gray-500">Morgan Alvarez · 2d</div>
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-<<<<<<< HEAD
-                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
-                                            alt="...">
-=======
                                         <img class="rounded-circle"
                                             src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="...">
->>>>>>> dashboard
                                         <div class="status-indicator bg-success"></div>
                                     </div>
                                     <div>
@@ -361,12 +301,8 @@
                                         <div class="small text-gray-500">Chicken the Dog · 2w</div>
                                     </div>
                                 </a>
-<<<<<<< HEAD
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
-=======
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Read More
                                     Messages</a>
->>>>>>> dashboard
                             </div>
                         </li>
 
@@ -377,12 +313,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-<<<<<<< HEAD
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
-=======
                                 <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
->>>>>>> dashboard
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -400,12 +331,8 @@
                                     Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
-<<<<<<< HEAD
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-=======
                                 <a class="dropdown-item" href="#" data-toggle="modal"
                                     data-target="#logoutModal">
->>>>>>> dashboard
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
@@ -414,7 +341,7 @@
 
                     </ul>
 
-                </nav>
+                </nav> --}}
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
@@ -428,7 +355,7 @@
                     </div>
 
                     <!-- Content Row -->
-                    <div class="row">
+                    {{-- <div class="row">
 
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
@@ -513,7 +440,7 @@
                             </div>
                         </div>
                     </div>
-
+ --}}
                     <!-- Content Row -->
 
                     <div class="row">
@@ -526,14 +453,9 @@
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
                                     <div class="dropdown no-arrow">
-<<<<<<< HEAD
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-=======
                                         <a class="dropdown-toggle" href="#" role="button"
                                             id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
                                             aria-expanded="false">
->>>>>>> dashboard
                                             <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
@@ -563,14 +485,9 @@
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
                                     <div class="dropdown no-arrow">
-<<<<<<< HEAD
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-=======
                                         <a class="dropdown-toggle" href="#" role="button"
                                             id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
                                             aria-expanded="false">
->>>>>>> dashboard
                                             <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
@@ -735,12 +652,8 @@
                                             target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>, a
                                         constantly updated collection of beautiful svg images that you can use
                                         completely free and without attribution!</p>
-<<<<<<< HEAD
-                                    <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on
-=======
                                     <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations
                                         on
->>>>>>> dashboard
                                         unDraw &rarr;</a>
                                 </div>
                             </div>
@@ -754,12 +667,8 @@
                                     <p>SB Admin 2 makes extensive use of Bootstrap 4 utility classes in order to reduce
                                         CSS bloat and poor page performance. Custom CSS classes are used to create
                                         custom components and custom utility classes.</p>
-<<<<<<< HEAD
-                                    <p class="mb-0">Before working with this theme, you should become familiar with the
-=======
                                     <p class="mb-0">Before working with this theme, you should become familiar with
                                         the
->>>>>>> dashboard
                                         Bootstrap framework, especially the utility classes.</p>
                                 </div>
                             </div>
@@ -774,13 +683,13 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
+           {{--  <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; Your Website 2021</span>
                     </div>
                 </div>
-            </footer>
+            </footer> --}}
             <!-- End of Footer -->
 
         </div>
@@ -830,5 +739,5 @@
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
+    @endsection
 
-</body>
