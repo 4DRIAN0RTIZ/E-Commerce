@@ -1,33 +1,7 @@
 <!-- Footer -->
-<footer style="clear: both; margin-top: 75px;" class="text-center text-lg-start bg-light text-muted">
-    
-      <!-- Right -->
-      <div>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-google"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-      <!-- Right -->
-    </section>
-    <!-- Section: Social media -->
-  
+<footer style="clear:both; margin-top: 75px;" class="text-center text-lg-start bg-light text-muted">
     <!-- Section: Links  -->
-    <section class="">
+    <section class="footer-la">
       <div class="container text-center text-md-start mt-5">
         <!-- Grid row -->
         <div class="row mt-3">
@@ -65,7 +39,14 @@
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
       © 2022 Todos los derechos reservados:
       <a class="text-reset fw-bold" href="https://utj.edu.mx/" target="_blank">Universidad Tecnológica de Jalisco</a><br>
-     <div class="text-center p-1 mb-1"><strong>Diseñado por:</strong> Adrian Ortiz Bustos</div>
+     <div class="text-center p-1 mb-1"><strong>Diseñado por:</strong> Adrian Ortiz Bustos 
+
+ <a href="" class="me-2 text-reset">
+          <i class="fab fa-linkedin"></i>
+        <a href="" class="me-2 text-reset">
+          <i class="fab fa-github"></i>
+
+     </div>
     </div>
     <!-- Copyright -->
   </footer>

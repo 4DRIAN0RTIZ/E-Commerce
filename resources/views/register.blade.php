@@ -6,28 +6,24 @@
                 <form action="register" method="POST">
                     @csrf
                     <div class="mb-2">
-                        <label class="form-label">Nombre</label>
-               <input type="text" name="name" value="{{old('name')}}" class="form-control">
+               <input type="text" name="name" value="{{old('name')}}" class="form-control" placeholder="Nombre">
                         @error('name')
                             <small style="color:red;">*{{ $message }}</small>
                             <br>
                         @enderror
                     </div>
                     <div class="mb-2">
-                        <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-                        <input type="email" name="email" value="{{old('email')}}" class="form-control">
+                        <input type="email" name="email" value="{{old('email')}}" class="form-control" placeholder="Correo electrónico">
                         @error('email')
                             <small style="color:red;">*{{$message}}</small>
                             <br>
                         @enderror
                     </div>
                     <div class="mb-2">
-                        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                        <input type="password" name="password" class="form-control">
+                        <input type="password" name="password" class="form-control" placeholder="Contraseña">
                     </div>
                     <div>
-                        <label for="exampleInputPassword1" class="form-label">Confirmar contraseña</label>
-                        <input type="password" name="password_confirmation" class="form-control">
+                        <input type="password" name="password_confirmation" class="form-control" placeholder="Confirmar contraseña">
                         @error('password')
                             <small style="color:red;">*{{$message}}</small>
                         @enderror
@@ -39,6 +35,9 @@
                             <small style="color:red;">*{{ $message }}</small>
                             <br>
                         @enderror
+                     <button type="submit" class="btn btn-outline-secondary">Registrarme</button><hr>
+                    <a href="/login-google" style="width: 100%;" class="btn login-with-google-btn">Ingresar con Google</a>
+
                     </div>
                     <div class=" mb-2 d-grid gap-2 col-12 mx-auto">
                     <button type="submit" class="btn btn-outline-secondary">Registrarme</button><hr>
@@ -47,7 +46,7 @@
                 </form>
             </div>
         </div>
-    </div><br><br><br><br>
+</div>
 <script type="text/javascript">
     var onloadCallback = function() {
 

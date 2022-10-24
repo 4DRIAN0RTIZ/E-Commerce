@@ -1,3 +1,5 @@
+
+<html>
 <?php
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Auth;
@@ -7,8 +9,10 @@ if (Auth::check()) {
     $total = ProductController::cartItem();
 }
 ?>
-
-<nav class="navbar navbar-expand-lg bg-gradient-primary">
+<head>
+    @include('head')
+</head>
+<nav class="navbar navbar-expand-lg laconsentida-color header-a">
     <div class="container-fluid">
         <a class="navbar-brand" style="font-family: 'Petit Formal Script', cursive;" href="/">La consentida</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -28,12 +32,14 @@ if (Auth::check()) {
                 <form action="/search" class="d-flex" role="search">
                     <input class="form-control me-4 search-box" name="query" type="search" placeholder="Búsqueda"
                         aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    <button class="btn btn-outline-primary-header" type="submit">Buscar</button>
                 </form>
             </ul>
             <ul class="nav nav-bar navbar-right">
                 @if (Auth::check())
                     <li class="nav-item"><a class="nav-link active" href="/cartlist">Carrito({{ $total }})</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="/dashboard">Panel administrativo</a>
                     </li>
                 @endif
                 @if (Auth::check())
@@ -57,3 +63,4 @@ if (Auth::check()) {
         </div>
     </div>
 </nav>
+</html>

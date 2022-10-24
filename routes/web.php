@@ -74,6 +74,7 @@ Route::get('/google-callback', function () {
     return redirect('/');
 });
 
+Route::view('/prueba','prueba');
 Route::view('/dashboard','dashboard');
 Route::view('/contact','contact');
 Route::view('/register','register');

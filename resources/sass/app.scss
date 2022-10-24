@@ -3,11 +3,35 @@
 
 // Variables
 @import 'variables.scss';
-@import 'app.css';
+
+.laconsentida-color{
+    background-color: $laconsentida;
+}
+
+
+
 
 // Bootstrap
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
 
 @import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+#accordionSidebar{
+    background-color: $laconsentida;
+    color: #000;
+}
 
 
+body{
+    background-color: #f9a9df;
+}
+
+.footer-la{
+    background-color: #986b89;
+    color: #fff;
+    margin-top: 10px;
+}
+
+
+#rc-anchor-container{
+    width: 5px;
+}

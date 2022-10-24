@@ -6,10 +6,13 @@ export default defineConfig({
         laravel({
             input: [
                 'resources/sass/app.scss',
-                'resources/css/app.css',
+                'resources/sass/app.css',
                 'resources/js/app.js',
             ],
             refresh: true,
         }),
     ],
+        build:{
+            chunkSizeWarningLimit: 2000,
+        },
 });

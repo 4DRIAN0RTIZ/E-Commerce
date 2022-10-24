@@ -7,7 +7,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav laconsentida-color sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
            {{--  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('home') }}">
@@ -40,13 +40,16 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
+                    <span>Ordenes</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="buttons.html">Buttons</a>
-                        <a class="collapse-item" href="cards.html">Cards</a>
+                        {{-- <h6 class="collapse-header">Custom Components:</h6> --}}
+                        <a class="collapse-item" href="buttons.html">Ver ordenes</a>
+                        {{-- <a class="collapse-item" href="cards.html">Ver clientes</a> --}}
+                        {{-- <a class="collapse-item" href="cards.html">Cards</a> --}}
+                        {{-- <a class="collapse-item" href="cards.html">Cards</a> --}}
+                        {{-- <a class="collapse-item" href="cards.html">Cards</a> --}}
                     </div>
                 </div>
             </li>
@@ -56,7 +59,7 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
-                    <span>Utilities</span>
+                    <span>Productos</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
@@ -346,7 +349,7 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
+<br>
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
@@ -722,22 +725,23 @@
             </div>
         </div>
     </div>
+@endsection
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    {{-- <!-- Bootstrap core JavaScript--> --}}
+    {{-- <script src="vendor/jquery/jquery.min.js"></script> --}}
+    {{-- <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> --}}
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    {{-- <!-- Core plugin JavaScript--> --}}
+    {{-- <script src="vendor/jquery-easing/jquery.easing.min.js"></script> --}}
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+    {{-- <!-- Custom scripts for all pages--> --}}
+    {{-- <script src="resources/js/"></script> --}}
 
-    <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+    {{-- <!-- Page level plugins --> --}}
+    {{-- <script src="vendor/chart.js/Chart.min.js"></script> --}}
 
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
-    @endsection
+    {{-- <!-- Page level custom scripts --> --}}
+    {{-- <script src="resources/js/demo/chart-area-demo.js"></script> --}}
+    {{-- <script src="../js/demo/chart-pie-demo.js"></script> --}}
+    {{-- @endsection --}}
 
