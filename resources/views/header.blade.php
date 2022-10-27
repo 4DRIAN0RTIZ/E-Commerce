@@ -1,4 +1,3 @@
-
 <html>
 <?php
 use App\Http\Controllers\ProductController;
@@ -9,9 +8,7 @@ if (Auth::check()) {
     $total = ProductController::cartItem();
 }
 ?>
-<head>
     @include('head')
-</head>
 <nav class="navbar navbar-expand-lg laconsentida-color header-a">
     <div class="container-fluid">
         <a class="navbar-brand" style="font-family: 'Petit Formal Script', cursive;" href="/">La consentida</a>
@@ -30,16 +27,16 @@ if (Auth::check()) {
                     </li>
 
                 <form action="/search" class="d-flex" role="search">
-                    <input class="form-control me-4 search-box" name="query" type="search" placeholder="Búsqueda"
+                    <input class="form-control me-4 search-box" name="query" type="search" placeholder="Buscar"
                         aria-label="Search">
-                    <button class="btn btn-outline-primary-header" type="submit">Buscar</button>
+                    <button class="btn btn-outline-primary" type="submit">Buscar</button>
                 </form>
             </ul>
             <ul class="nav nav-bar navbar-right">
                 @if (Auth::check())
-                    <li class="nav-item"><a class="nav-link active" href="/cartlist">Carrito({{ $total }})</a>
+                <li class="nav-item"><a class="nav-link active" href="/cartlist"><i class="fa-solid fa-cart-shopping"></i> {{ $total }}</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link active" href="/dashboard">Panel administrativo</a>
+                <li class="nav-item"><a class="nav-link active" href="/dashboard"><i class="fa-solid fa-table-columns"></i> Panel</a>
                     </li>
                 @endif
                 @if (Auth::check())

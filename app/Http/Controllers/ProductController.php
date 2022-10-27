@@ -20,7 +20,7 @@ class ProductController extends Controller
     function index()
     {
         $data = Product::all();
-        return view('product', ['products' => $data]);
+        return view('home', ['products' => $data]);
     }
     function detail($id)
     {
@@ -39,7 +39,7 @@ class ProductController extends Controller
             $cart->user_id = $req->user_id = Auth::id();
             $cart->product_id = $req->product_id;
             $cart->save();
-            return redirect('/');
+            return redirect('/home');
         } else {
             return redirect('/login');
         }

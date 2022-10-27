@@ -29,7 +29,7 @@
                             <small style="color:red;">*{{$message}}</small>
                         @enderror
                     </div>
-                    <div class="mb-2">
+                    <div class="mb-2 col-12">
                             {!! NoCaptcha::renderJs('es-419', true, 'onloadCallback') !!}
                             {!! NoCaptcha::display(
                                 ['data-sitekey' => '6Le04EAiAAAAALWcZlyJMab13JIPRZbgKx98of6z',

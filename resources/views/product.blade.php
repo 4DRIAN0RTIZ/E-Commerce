@@ -14,7 +14,7 @@
                         </a>
                     </div>
                 @endforeach
-            </div>
+                </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -26,17 +26,20 @@
                 <span class="visually-hidden">Siguiente</span>
             </button>
         </div>
-        <div class="trending-wrapper">
+        <div class="trending-wrapper container">
           <h3>Artículos en trending</h3>
             @foreach ($products as $item)
-                <div class="trending-item">
+                <div class="trending-item row">
+                    <div class="col-md-6">
                     <a href="detail/{{$item ['id']}}">
                     <img class="trending-image" src="{{ $item['gallery'] }}" alt="Imagen">
                     <div class="">
-                        <h5>{{ $item['name'] }}</h5>                        
+                        <h5>{{ $item['name'] }}</h5>
+
                     </div>
-                    </a>
+                     </a>
                 </div>
+            </div>
             @endforeach
         </div>
     </div>
