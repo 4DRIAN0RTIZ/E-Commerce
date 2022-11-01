@@ -1,6 +1,45 @@
 @extends('master')
     @section('content')
-
+        <style>
+img {
+   max-width: 100%;
+   
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   -o-user-select: none;
+   user-select: none;
+}
+   .header {
+      min-height: 30px;
+      background: $wrapper-bg;
+      background-size: cover;
+      border-radius: 5px 5px 0 0;
+   }
+   .user-image img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      width: 186px;
+      border-radius: 50%;
+      margin: 0 auto;
+      bottom: 20px;
+   }
+   .info {
+      position: relative;
+      text-align: center;
+      bottom: 0px;}
+   .name {
+         color: #fff;
+        font-size: 1.2em;
+      }
+   .work-position {
+         color: #fff;
+         font-size: 1.0em;
+         font-style: italic;
+      }
+        </style>
     <!-- Page Wrapper -->
     <div id="wrapper">
 
@@ -20,17 +59,23 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-light fa-address-card"></i>
-                    <span>Perfil</span></a>
-            </li>
+                <div class="header"></div>
+   
+   <div class="user-image">
+      <img src="https://cdn0.iconfinder.com/data/icons/user-pictures/100/male-512.png" alt="User" />
+   </div>
+   
+   <div class="info">
+      <h5 class="name"><strong>{{ Auth::user()->name }}</strong></h5>
+      <p class="work-position">Admin</p>
+   </div></li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Acciones
+                Opciones
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -639,7 +684,6 @@
 
 
                         <!-- Pie Chart -->
-                        <div class="col-xl-4 col-lg-5">
                             {{-- <div class="card shadow mb-4"> --}}
                             {{--     <!-- card header - dropdown --> --}}
                             {{--     <div --}}

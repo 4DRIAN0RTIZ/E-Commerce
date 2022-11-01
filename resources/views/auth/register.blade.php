@@ -7,6 +7,7 @@
                     @csrf
                     <div class="mb-2">
                <input type="text" name="name" value="{{old('name')}}" class="form-control" placeholder="Nombre">
+               {{-- <input type="file" name="avatar" class="form-control"> --}}
                
                         @error('name')
                             <small style="color:red;">*{{ $message }}</small>

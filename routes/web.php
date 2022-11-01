@@ -91,6 +91,10 @@ Route::post("orderplace",[ProductController::class,'orderPlace']);
 Route::get("myorders",[ProductController::class,'myOrder']);
 Route::get("pdfreport",[ProductController::class,'Print']);
 
-Auth::routes();
+/* Route::get('payment', [PayPalController::class, 'payment'])->name('payment'); */
+/* Route::get('cancel', [PayPalController::class, 'cancel'])->name('payment.cancel'); */
+/* Route::get('payment/success', [PayPalController::class, 'success'])->name('payment.success'); */
 
+
+Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

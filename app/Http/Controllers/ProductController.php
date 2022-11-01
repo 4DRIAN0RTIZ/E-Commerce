@@ -75,7 +75,6 @@ class ProductController extends Controller
             ->join('products', 'cart.product_id', 'products.id')
             ->where('cart.user_id', $userId)
             ->sum('products.price');
-
         return view('ordernow', ['total' => $total]);
     }
     function orderPlace(Request $req)
@@ -101,7 +100,9 @@ class ProductController extends Controller
             $allCart = Cart::where('user_id', $userId)->delete();
         }
         $req->input();
-        return redirect(('/')); } function myOrder()
+        return redirect(('/')); } 
+    
+    function myOrder()
     {
         if (Auth::check()) {
             $userId = Auth::user()->id;
