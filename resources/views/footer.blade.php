@@ -1,7 +1,7 @@
 <!-- Footer -->
-<footer style="clear:both; margin-top: 75px;" class="text-center text-lg-start bg-light text-muted">
+<footer style="clear:both;" class="text-center text-lg-start text-muted">
+  <hr style="width: 85%; margin: auto;">
     <!-- Section: Links  -->
-    <section class="footer-la">
       <div class="container text-center text-md-start mt-5">
         <!-- Grid row -->
         <div class="row mt-3">
@@ -32,20 +32,18 @@
         </div>
         <!-- Grid row -->
       </div>
-    </section>
     <!-- Section: Links  -->
   
     <!-- Copyright -->
-    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    <div class="text-center">
       © 2022 Todos los derechos reservados:
-      <a class="text-reset fw-bold" href="https://utj.edu.mx/" target="_blank">Universidad Tecnológica de Jalisco</a><br>
-     <div class="text-center p-1 mb-1"><strong>Diseñado por:</strong> Adrian Ortiz Bustos 
+      <a class="text-reset fw-bold" href="https://utj.edu.mx/" target="_blank">Universidad Tecnológica de Jalisco</a>
+      <div class="text-center p-1"><strong>Diseñado por:</strong> Adrian Ortiz Bustos
 
- <a href="" class="me-2 text-reset">
+        <a href="" class="text-reset">
           <i class="fab fa-linkedin"></i>
-        <a href="" class="me-2 text-reset">
+        <a href="" class="text-reset">
           <i class="fab fa-github"></i>
-
      </div>
     </div>
     <!-- Copyright -->

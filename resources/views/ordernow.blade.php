@@ -1,5 +1,20 @@
 @extends('master')
 @section('content')
+  @php
+    require base_path('vendor/autoload.php');
+    // Agrega credenciales
+    MercadoPago\SDK::setAccessToken(config('services.mercadopago.token'));
+    $preference = new MercadoPago\Preference();
+    $item = new MercadoPago\Item();
+    $item->title = 'Mi producto';
+    $item->quantity = 1;
+    $item->unit_price = ($total*.16)+($total+500);
+    $preference->items = array($item);
+    $preference->save();
+  @endphp
+      {{-- // SDK MercadoPago.js V2 --}}
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+ 
     <div class="container custom-product">
         <div class="col-sm-10">
             <table class="table">
@@ -43,6 +58,24 @@
                 <br>
                 <button type="submit" class="btn btn-primary">Finalizar compra</button>
               </form>
+              
+                <div class="cho-container"></div>
+                <script>
+                    const mp = new MercadoPago("{{ config('services.mercadopago.key') }}", {
+                      locale: 'es-MX'
+                        });
+
+                  mp.checkout({
+                  preference: {
+                    id: '{{ $preference->id }}'
+                  },
+                  render: {
+                  container: '.cho-container',
+                  label: 'Pagar',
+                  }
+                  });
+                </script>
+
           </div>
         </div>
     </div>

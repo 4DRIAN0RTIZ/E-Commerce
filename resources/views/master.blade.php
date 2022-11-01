@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
     @include('head')
-</head>
 
 <body>
     {{ View::make('header') }}
     @yield('content')
     {{ View::make('footer') }}
 </body>
-
+</html>
 
 {{-- <style>
     /*Start google*/
@@ -125,5 +123,4 @@ a:hover{
     })
 </script> -->
 
-</html>
 

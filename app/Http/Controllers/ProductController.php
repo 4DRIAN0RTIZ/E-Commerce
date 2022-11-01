@@ -20,7 +20,7 @@ class ProductController extends Controller
     function index()
     {
         $data = Product::all();
-        return view('product', ['products' => $data]);
+        return view('home', ['products' => $data]);
     }
     function detail($id)
     {
@@ -39,7 +39,7 @@ class ProductController extends Controller
             $cart->user_id = $req->user_id = Auth::id();
             $cart->product_id = $req->product_id;
             $cart->save();
-            return redirect('/');
+            return redirect('/home');
         } else {
             return redirect('/login');
         }
@@ -75,7 +75,6 @@ class ProductController extends Controller
             ->join('products', 'cart.product_id', 'products.id')
             ->where('cart.user_id', $userId)
             ->sum('products.price');
-
         return view('ordernow', ['total' => $total]);
     }
     function orderPlace(Request $req)
@@ -101,7 +100,9 @@ class ProductController extends Controller
             $allCart = Cart::where('user_id', $userId)->delete();
         }
         $req->input();
-        return redirect(('/')); } function myOrder()
+        return redirect(('/')); } 
+    
+    function myOrder()
     {
         if (Auth::check()) {
             $userId = Auth::user()->id;
