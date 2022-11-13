@@ -4,7 +4,7 @@
         <div class="col-sm-10">
             <div class="trending-wrapper">
                 <h5>Mis órdenes</h5><br><br>
-                @foreach ($orders as $item)
+                @foreach ($order as $item)
                     <div class=" row searched-item cart-list-divisor">
                         <div class="col-sm-3">
                             <a href="detail/{{ $item->id }}">

@@ -6,15 +6,21 @@
 
 .laconsentida-color{
     background-color: $laconsentida;
+    color: $primary;
     a{
-        color: rgb(255, 255, 255);
+        color: $primary;
+        font-weight: bold;
     }
 }
 
 .nameP{
-    color: #000;
+    color: $primary;
 }
 
+.sidebarToggle{
+    border-color: #000;
+
+}
 
 // Bootstrap
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
@@ -22,12 +28,12 @@
 @import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 #accordionSidebar{
     background-color: $laconsentida;
-    color: #000;
+    color: $primary;
 }
 
 
 body{
-    background-color: #f9a9df;
+    background-color: #FFFFFF;
 }
 
 .footer-la{

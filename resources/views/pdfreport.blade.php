@@ -1,26 +1,72 @@
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <style>
-        body{
+        body {
             font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace !important;
             letter-spacing: -0.3px;
         }
-        .invoice-wrapper{ width: 700px; margin: auto; }
-        .logo{ font-size: 50px; }
-        .sidebar-collapse .brand-link .brand-image{ margin-top: -33px; }
-        .content-wrapper{ margin: auto !important; }
-        .billing-company-image { width: 50px; }
-        .billing_name { text-transform: uppercase; }
-        .billing_address { text-transform: capitalize; }
-        .table{ width: 100%; border-collapse: collapse; }
-        th{ text-align: left; padding: 10px; }
-        td{ padding: 10px; vertical-align: top; }
-        .row{ display: block; clear: both; }
-        .text-right{ text-align: right; }
-        address{ font-style: normal; }
+
+        .invoice-wrapper {
+            width: 700px;
+            margin: auto;
+        }
+
+        .logo {
+            font-size: 50px;
+        }
+
+        .sidebar-collapse .brand-link .brand-image {
+            margin-top: -33px;
+        }
+
+        .content-wrapper {
+            margin: auto !important;
+        }
+
+        .billing-company-image {
+            width: 50px;
+        }
+
+        .billing_name {
+            text-transform: uppercase;
+        }
+
+        .billing_address {
+            text-transform: capitalize;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            text-align: left;
+            padding: 10px;
+        }
+
+        td {
+            padding: 10px;
+            vertical-align: top;
+        }
+
+        .row {
+            display: block;
+            clear: both;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        address {
+            font-style: normal;
+        }
     </style>
 </head>
+
 <body>
     <div class="row invoice-wrapper">
         <div class="col-md-12">
@@ -55,7 +101,7 @@
                             <td>
                             </td>
                             <td>
-                               {{--  <div class="text-right">
+                                {{--  <div class="text-right">
 
 @foreach ($orders as $num)
 
@@ -83,42 +129,44 @@
                         </thead>
                         <tbody>
                             @foreach ($orders as $item)
-                            <tr>
+                                <tr>
 
-                            <td>{{ $item->id }}</td>
-                            <td>{{ $item->name }}</td>
-                                <td>{{ $item->description }}</td>
-                                <td class="text-right">${{ $item->price }}</td>
+                                    <td>{{ $item->order_id }}</td>
+                                    <td>{{ $item->name }}</td>
+                                    <td>{{ $item->description }}</td>
+                                    <td class="text-right">${{ $item->price }}</td>
+                                </tr>
+                                <tr>
+                            @endforeach
+                            <td colspan="3" class="text-right">Sub Total</td>
+                            <td class="text-right"><strong>$ {{ $total }}</td>
                             </tr>
                             <tr>
-                                @endforeach
-                                <td colspan="3" class="text-right">Sub Total</td>
-                                <td class="text-right"><strong>$ {{ $total }}</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="3" class="text-right">IVA (16%)</td>
-                                    <td class="text-right"><strong>${{ $total * .16 }}</strong></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="3" class="text-right">Total a pagar</td>
-                                    <td class="text-right"><strong>${{ ($total * .16) + $total }}</strong></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                                <td colspan="3" class="text-right">IVA (16%)</td>
+                                <td class="text-right"><strong>${{ $total * 0.16 }}</strong></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="text-right">Total a pagar</td>
+                                <td class="text-right"><strong>${{ $total * 0.16 + $total }}</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
                 <!-- /.col -->
             </div>
             <br><br><br>
             <div>
-                <div><img src="data:image/png;base64,{{ base64_encode(QrCode::size(100)->generate('This its a test')) }}"</div>
-                <small><small>NOTA: Para este comprobante no se necesita firma.</small></small>
+                <div><img
+                        src="data:image/png;base64,{{ base64_encode(QrCode::size(100)->generate('This its a test')) }}"</div>
+                    <small><small>NOTA: Para este comprobante no se necesita firma.</small></small>
+                </div>
             </div>
         </div>
-    </div>
 </body>
+
 </html>
-         {{-- <div class="col-sm-10">
+{{-- <div class="col-sm-10">
                 <div class="trending-wrapper">
                     @foreach ($orders as $item)
                         <div class="row searched-item cart-list-divisor">

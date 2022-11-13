@@ -1,53 +1,57 @@
 @extends('master')
-    @section('content')
-        <style>
-img {
-   max-width: 100%;
-   
-   -webkit-user-select: none;
-   -moz-user-select: none;
-   -ms-user-select: none;
-   -o-user-select: none;
-   user-select: none;
-}
-   .header {
-      min-height: 30px;
-      background: $wrapper-bg;
-      background-size: cover;
-      border-radius: 5px 5px 0 0;
-   }
-   .user-image img {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      width: 186px;
-      border-radius: 50%;
-      margin: 0 auto;
-      bottom: 20px;
-   }
-   .info {
-      position: relative;
-      text-align: center;
-      bottom: 0px;}
-   .name {
-         color: #fff;
-        font-size: 1.2em;
-      }
-   .work-position {
-         color: #fff;
-         font-size: 1.0em;
-         font-style: italic;
-      }
-        </style>
+@section('content')
+    <style>
+        img {
+            max-width: 100%;
+
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+
+        .header {
+            min-height: 30px;
+            background: $wrapper-bg;
+            background-size: cover;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .user-image img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 186px;
+            border-radius: 50%;
+            margin: 0 auto;
+            bottom: 20px;
+        }
+
+        .info {
+            position: relative;
+            text-align: center;
+            bottom: 0px;
+        }
+
+        .name {
+            color: $primary;
+            font-size: 1.2em;
+        }
+
+        .work-position {
+            color: #fff;
+            font-size: 1.0em;
+            font-style: italic;
+        }
+    </style>
     <!-- Page Wrapper -->
     <div id="wrapper">
-
-        <!-- Sidebar -->
-        <ul class="navbar-nav laconsentida-color sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav laconsentida-color sidebar accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-           {{--  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('home') }}">
+            {{--  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('home') }}">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -60,15 +64,16 @@ img {
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
                 <div class="header"></div>
-   
-   <div class="user-image">
-      <img src="https://cdn0.iconfinder.com/data/icons/user-pictures/100/male-512.png" alt="User" />
-   </div>
-   
-   <div class="info">
-      <h5 class="name"><strong>{{ Auth::user()->name }}</strong></h5>
-      <p class="work-position">Admin</p>
-   </div></li>
+
+                <div class="user-image">
+                    <img src="https://cdn0.iconfinder.com/data/icons/user-pictures/100/male-512.png" alt="User" />
+                </div>
+
+                <div class="info">
+                    <h5 class="name"><strong>{{ Auth::user()->name }}</strong></h5>
+                    <p class="work-position">Admin</p>
+                </div>
+            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -104,8 +109,7 @@ img {
                     <i class="fas fa-regular fa-user"></i>
                     <span>Usuarios</span>
                 </a>
-                <div id="collapseUser" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
+                <div id="collapseUser" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Acciones:</h6>
                         <a class="collapse-item" href="utilities-color.html">Agregar</a>
@@ -204,7 +208,7 @@ img {
             <div id="content">
 
                 <!-- Topbar -->
-               {{--  <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                {{--  <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -410,7 +414,7 @@ img {
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-<br>
+                    <br>
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
@@ -511,14 +515,12 @@ img {
                         <div class="col-xl-12 col-lg-12">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-secondary">Ordenes de (nombre)</h6>
-                                    
+
                                     <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button"
-                                            id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
@@ -534,31 +536,31 @@ img {
                                 <!-- Card Body -->
                                 <div class="card-body">
                                     <table class="table">
-                                          <thead>
+                                        <thead>
                                             <tr>
-                                              <th scope="col">#</th>
-                                              <th scope="col">First</th>
-                                              <th scope="col">Last</th>
-                                              <th scope="col">Handle</th>
+                                                <th scope="col">#</th>
+                                                <th scope="col">First</th>
+                                                <th scope="col">Last</th>
+                                                <th scope="col">Handle</th>
                                             </tr>
-                                          </thead>
+                                        </thead>
                                         <tbody>
                                             <tr>
-                                              <th scope="row">1</th>
-                                              <td>Mark</td>
-                                              <td>Otto</td>
-                                              <td>@mdo</td>
+                                                <th scope="row">1</th>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td>@mdo</td>
                                             </tr>
                                             <tr>
-                                              <th scope="row">2</th>
-                                              <td>Jacob</td>
-                                              <td>Thornton</td>
-                                              <td>@fat</td>
+                                                <th scope="row">2</th>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                                <td>@fat</td>
                                             </tr>
                                             <tr>
-                                            <th scope="row">3</th>
-                                              <td colspan="2">Larry the Bird</td>
-                                              <td>@twitter</td>
+                                                <th scope="row">3</th>
+                                                <td colspan="2">Larry the Bird</td>
+                                                <td>@twitter</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -570,14 +572,12 @@ img {
                         <div class="col-xl-12 col-lg-12">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-secondary">Ordenes de (nombre)</h6>
-                                    
+
                                     <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button"
-                                            id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
@@ -592,49 +592,47 @@ img {
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
-                                        <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">First</th>
+                                                <th scope="col">Last</th>
+                                                <th scope="col">Handle</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                                <td>@fat</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td colspan="2">Larry the Bird</td>
+                                                <td>@twitter</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
-<div class="col-xl-12 col-lg-12">
+                        <div class="col-xl-12 col-lg-12">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-secondary">Ordenes de (nombre)</h6>
-                                    
+
                                     <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button"
-                                            id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
@@ -649,101 +647,101 @@ img {
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
-                                        <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">First</th>
+                                                <th scope="col">Last</th>
+                                                <th scope="col">Handle</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                                <td>@fat</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td colspan="2">Larry the Bird</td>
+                                                <td>@twitter</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
 
 
                         <!-- Pie Chart -->
-                            {{-- <div class="card shadow mb-4"> --}}
-                            {{--     <!-- card header - dropdown --> --}}
-                            {{--     <div --}}
-                            {{--         class="card-header py-3 d-flex flex-row align-items-center justify-content-between"> --}}
-                            {{--         <h6 class="m-0 font-weight-bold text-primary">datos del cliente</h6> --}}
-                            {{--         <div class="dropdown no-arrow"> --}}
-                            {{--             <a class="dropdown-toggle" href="#" role="button" --}}
-                            {{--                 id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true" --}}
-                            {{--                 aria-expanded="false"> --}}
-                            {{--                 <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i> --}}
-                            {{--             </a> --}}
-                            {{--             <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" --}}
-                            {{--                 aria-labelledby="dropdownmenulink"> --}}
-                            {{--                 <div class="dropdown-header">dropdown header:</div> --}}
-                            {{--                 <a class="dropdown-item" href="#">action</a> --}}
-                            {{--                 <a class="dropdown-item" href="#">another action</a> --}}
-                            {{--                 <div class="dropdown-divider"></div> --}}
-                            {{--                 <a class="dropdown-item" href="#">something else here</a> --}}
-                            {{--             </div> --}}
-                            {{--         </div> --}}
-                            {{--     </div> --}}
-                            {{--     <!-- card body --> --}}
-                            {{--     <div class="card-body"> --}}
-                            {{--         <div class="chart-pie pt-4 pb-2"> --}}
-                            {{--         </div> --}}
-                            {{--         <div class="mt-4 text-center small"> --}}
-                            {{--             <span class="mr-2"> --}}
-                            {{--                 <i class="fas fa-circle text-primary"></i> direct --}}
-                            {{--             </span> --}}
-                            {{--             <span class="mr-2"> --}}
-                            {{--                 <i class="fas fa-circle text-success"></i> social --}}
-                            {{--             </span> --}}
-                            {{--         </div> --}}
-                            {{--     </div> --}}
-                            {{-- </div> --}}
-                        </div>
+                        {{-- <div class="card shadow mb-4"> --}}
+                        {{--     <!-- card header - dropdown --> --}}
+                        {{--     <div --}}
+                        {{--         class="card-header py-3 d-flex flex-row align-items-center justify-content-between"> --}}
+                        {{--         <h6 class="m-0 font-weight-bold text-primary">datos del cliente</h6> --}}
+                        {{--         <div class="dropdown no-arrow"> --}}
+                        {{--             <a class="dropdown-toggle" href="#" role="button" --}}
+                        {{--                 id="dropdownmenulink" data-toggle="dropdown" aria-haspopup="true" --}}
+                        {{--                 aria-expanded="false"> --}}
+                        {{--                 <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i> --}}
+                        {{--             </a> --}}
+                        {{--             <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" --}}
+                        {{--                 aria-labelledby="dropdownmenulink"> --}}
+                        {{--                 <div class="dropdown-header">dropdown header:</div> --}}
+                        {{--                 <a class="dropdown-item" href="#">action</a> --}}
+                        {{--                 <a class="dropdown-item" href="#">another action</a> --}}
+                        {{--                 <div class="dropdown-divider"></div> --}}
+                        {{--                 <a class="dropdown-item" href="#">something else here</a> --}}
+                        {{--             </div> --}}
+                        {{--         </div> --}}
+                        {{--     </div> --}}
+                        {{--     <!-- card body --> --}}
+                        {{--     <div class="card-body"> --}}
+                        {{--         <div class="chart-pie pt-4 pb-2"> --}}
+                        {{--         </div> --}}
+                        {{--         <div class="mt-4 text-center small"> --}}
+                        {{--             <span class="mr-2"> --}}
+                        {{--                 <i class="fas fa-circle text-primary"></i> direct --}}
+                        {{--             </span> --}}
+                        {{--             <span class="mr-2"> --}}
+                        {{--                 <i class="fas fa-circle text-success"></i> social --}}
+                        {{--             </span> --}}
+                        {{--         </div> --}}
+                        {{--     </div> --}}
+                        {{-- </div> --}}
                     </div>
-
-                    <!-- Content Row -->
-                    
-                                            </div>
-
                 </div>
-                <!-- /.container-fluid -->
+
+                <!-- Content Row -->
 
             </div>
-            <!-- End of Main Content -->
 
-            <!-- Footer -->
-           {{--  <footer class="sticky-footer bg-white">
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+    <!-- End of Main Content -->
+
+    <!-- Footer -->
+    {{--  <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; Your Website 2021</span>
                     </div>
                 </div>
             </footer> --}}
-            <!-- End of Footer -->
+    <!-- End of Footer -->
 
-        </div>
-        <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Content Wrapper -->
 
     </div>
     <!-- End of Page Wrapper -->
@@ -774,21 +772,19 @@ img {
     </div>
 @endsection
 
-    {{-- <!-- Bootstrap core JavaScript--> --}}
-    {{-- <script src="vendor/jquery/jquery.min.js"></script> --}}
-    {{-- <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> --}}
+{{-- <!-- Bootstrap core JavaScript--> --}}
+{{-- <script src="vendor/jquery/jquery.min.js"></script> --}}
+{{-- <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> --}}
 
-    {{-- <!-- Core plugin JavaScript--> --}}
-    {{-- <script src="vendor/jquery-easing/jquery.easing.min.js"></script> --}}
+{{-- <!-- Core plugin JavaScript--> --}}
+{{-- <script src="vendor/jquery-easing/jquery.easing.min.js"></script> --}}
 
-    {{-- <!-- Custom scripts for all pages--> --}}
-    {{-- <script src="resources/js/"></script> --}}
+{{-- <!-- Custom scripts for all pages--> --}}
+{{-- <script src="resources/js/"></script> --}}
 
-    {{-- <!-- Page level plugins --> --}}
-    {{-- <script src="vendor/chart.js/Chart.min.js"></script> --}}
+{{-- <!-- Page level plugins --> --}}
+{{-- <script src="vendor/chart.js/Chart.min.js"></script> --}}
 
-    {{-- <!-- Page level custom scripts --> --}}
-    {{-- <script src="resources/js/demo/chart-area-demo.js"></script> --}}
-    {{-- <script src="../js/demo/chart-pie-demo.js"></script> --}}
-    {{-- @endsection --}}
-
+{{-- <!-- Page level custom scripts --> --}}
+{{-- <script src="resources/js/demo/chart-area-demo.js"></script> --}}
+{{-- <script src="../js/demo/chart-pie-demo.js"></script> --}}

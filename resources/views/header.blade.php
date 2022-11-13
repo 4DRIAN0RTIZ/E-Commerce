@@ -36,7 +36,7 @@ if (Auth::check()) {
                 @if (Auth::check())
                 <li class="nav-item">
                     <a class="nav-link active" href="/cartlist"><i class="fa-solid fa-cart-shopping"></i>
-<span class="badge badge-danger badge-counter">{{ $total }}</span></a>
+<span class="badge badge-warning badge-counter">{{ $total }}</span></a>
                 </li>
                 <li class="nav-item"><a class="nav-link active" href="/dashboard"><i class="fa-solid fa-table-columns"></i> Panel</a>
                     </li>

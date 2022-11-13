@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class PDFController extends Controller
 {
-        public function(){
+public function(){
 
         }
 }

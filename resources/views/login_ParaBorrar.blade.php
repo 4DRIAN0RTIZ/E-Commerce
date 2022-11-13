@@ -7,6 +7,7 @@
                     @csrf
                     <div class="mb-2">
                         <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+                        <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
                         <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-2">

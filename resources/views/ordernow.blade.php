@@ -38,7 +38,7 @@
             </tbody>
           </table>
           <div>
-            <form action="/orderplace" method="POST">
+            <form action="{{route('orderplace')}}" method="POST">
                 @csrf
                 <div class="form-group">
                   <textarea name="address"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="resize:none;" placeholder="Ingresa tu dirección"></textarea>
