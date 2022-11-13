@@ -12,24 +12,28 @@ use App\Models\Product;
 use App\Models\Cart;
 use App\Models\Order;
 use App\Models\OrderDetail;
+use GuzzleHttp\Handler\Proxy;
 use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
     //
+    function inicio(){
+        return view('home')->with('products',Product::all());
+    }
     function index()
     {
-        $data = Product::all();
-        return view('home', ['products' => $data]);
+        return view('productindex')->with('products', Product::all());
     }
 
     public function create(){
-        return view('productcreate');
+        return view('productcreatecopy');
     }
 
 public function store(Request $req)
     {
         $product = new Product();
+
 
         $product->name = $req->name;
         $product->description = $req->description;
@@ -37,7 +41,7 @@ public function store(Request $req)
         $product->price = $req->price;
         if ($req->hasfile('gallery')) {
             $imagen         = $req->file('gallery');
-            $nombreimagen   = Str::slug($req->id . '_' . $req->name . '_' . $req->name) . "." . $imagen->guessExtension();
+            $nombreimagen   = Str::slug($req->id . '_' . $req->name . '_' . $req->category) . "." . $imagen->guessExtension();
             //$nombreimagen = $imagen->getClientOriginalName();
             $ruta           = public_path("img/product/");
             $imagen->move($ruta, $nombreimagen);
@@ -47,15 +51,14 @@ public function store(Request $req)
             $product->gallery = $req->imagenactual;
         }
 
-
         $product->save();
 
-        return view('/home')->with('products', Product::all())->with('mensaje', "Producto Añadido");
+        return view('productindex')->with('products', Product::all())->with('mensaje', "Producto Añadido");
 }
     public function show($id)
     {
         $product = Product::find($id);
-        return view('Product.show')->with('product', $product);
+        return view('productshow')->with('product', $product);
     }
 
      public function edit($id)
@@ -74,7 +77,7 @@ public function store(Request $req)
         $product->price = $req->price;
         if ($req->hasfile('gallery')) {
             $imagen         = $req->file('gallery');
-            $nombreimagen   = Str::slug($req->id . '_' . $req->nombre . '_' . $req->marca) . "." . $imagen->guessExtension();
+            $nombreimagen   = Str::slug($req->id . '_' . $req->name . '_' . $req->category) . "." . $imagen->guessExtension();
             //$nombreimagen = $imagen->getClientOriginalName();
             $ruta           = public_path("img/product/");
             $imagen->move($ruta, $nombreimagen);
@@ -88,6 +91,12 @@ public function store(Request $req)
 
         return view('productindex')->with('products', Product::all())->with('mensaje', "Producto Actualizado");
     }
+    public function destroy($id)
+    {
+        Product::destroy($id);
+        return view('productindex')->with('products', Product::all())->with('mensaje', "Producto Eliminado");
+    }
+
 
     function detail($id)
     {

@@ -73,16 +73,18 @@ Route::get('/google-callback', function () {
 
     return redirect('/');
 });
+Route::view('/productindex','productindex')->name('productindex');
+Route::view('productshow','productshow')->name('productshow');
 Route::view('/productedit','productedit')->name('productedit');
 Route::view('/productcreate','productcreate')->name('productcreate');
-Route::resource('product',ProductController::class);
+Route::resource('product',ProductController::class)->middleware('auth');
 Route::view('/prueba','prueba');
 Route::view('/dashboard','dashboard');
 Route::view('/contact','contact');
 Route::view('/register','register');
 Route::post("/login",[UserController::class,'login']);
 Route::post("/register",[UserController::class,'register']);
-Route::get("/",[ProductController::class,'index']);
+Route::get("/",[ProductController::class,'inicio']);
 Route::get("detail/{id}",[ProductController::class,'detail']);
 Route::get("search",[ProductController::class,'search']);
 Route::post("add_to_cart",[ProductController::class,'addToCart']);

@@ -1,6 +1,4 @@
-@extends('master')
-
-@section('content')
+@include('head')
 <div class="container">
         <div class="row">
             <div class="col-lg-10 col-md-10">
@@ -11,8 +9,7 @@
 
                     <div class="form-row">
                         <div class="col-md-6 mb-2">
-                            <label for="validationCustom01">Id</label>
-                            <input type="text" class="form-control" id="validationCustom01" name="id" id="Nombre"
+                            <input type="hidden" class="form-control" id="validationCustom01" name="id" id="Nombre"
                                 maxlength="50" readonly>
                             <div class="valid-feedback">
                                 Looks good!
@@ -95,4 +92,3 @@
         </div>
 </div>
 
-@endsection

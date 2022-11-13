@@ -49,15 +49,6 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
         <ul class="navbar-nav laconsentida-color sidebar accordion" id="accordionSidebar">
-
-            <!-- Sidebar - Brand -->
-            {{--  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('home') }}">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">La consentida <sup>+</sup></div>
-            </a> --}}
-
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
@@ -84,41 +75,41 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-solid fa-box"></i>
-                    <span>Ordenes</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        {{-- <h6 class="collapse-header">Custom Components:</h6> --}}
-                        <a class="collapse-item" href="buttons.html">Ver ordenes</a>
-                        {{-- <a class="collapse-item" href="cards.html">Ver clientes</a> --}}
-                        {{-- <a class="collapse-item" href="cards.html">Cards</a> --}}
-                        {{-- <a class="collapse-item" href="cards.html">Cards</a> --}}
-                        {{-- <a class="collapse-item" href="cards.html">Cards</a> --}}
-                    </div>
-                </div>
-            </li>
+            {{-- <li class="nav-item"> --}}
+            {{--     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" --}}
+            {{--         aria-expanded="true" aria-controls="collapseTwo"> --}}
+            {{--         <i class="fas fa-solid fa-box"></i> --}}
+            {{--         <span>Ordenes</span> --}}
+            {{--     </a> --}}
+            {{--     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar"> --}}
+            {{--         <div class="bg-white py-2 collapse-inner rounded"> --}}
+            {{--             {{-1- <h6 class="collapse-header">Custom Components:</h6> -1-}} --}}
+            {{--             <a class="collapse-item" href="buttons.html">Ver Ordenes</a> --}}
+            {{--             {{-1- <a class="collapse-item" href="cards.html">Ver clientes</a> -1-}} --}}
+            {{--             {{-1- <a class="collapse-item" href="cards.html">Cards</a> -1-}} --}}
+            {{--             {{-1- <a class="collapse-item" href="cards.html">Cards</a> -1-}} --}}
+            {{--             {{-1- <a class="collapse-item" href="cards.html">Cards</a> -1-}} --}}
+            {{--         </div> --}}
+            {{--     </div> --}}
+            {{-- </li> --}}
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUser"
-                    aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-regular fa-user"></i>
-                    <span>Usuarios</span>
-                </a>
-                <div id="collapseUser" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Acciones:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Agregar</a>
-                        <a class="collapse-item" href="utilities-border.html">Dar baja</a>
-                        <a class="collapse-item" href="utilities-animation.html">Actualizar</a>
-                        <a class="collapse-item" href="utilities-other.html">Ver activos</a>
-                    </div>
-                </div>
-            </li>
+            {{-- <li class="nav-item"> --}}
+            {{--     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUser" --}}
+            {{--         aria-expanded="true" aria-controls="collapseUtilities"> --}}
+            {{--         <i class="fas fa-regular fa-user"></i> --}}
+            {{--         <span>Usuarios</span> --}}
+            {{--     </a> --}}
+            {{--     <div id="collapseUser" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar"> --}}
+            {{--         <div class="bg-white py-2 collapse-inner rounded"> --}}
+            {{--             <h6 class="collapse-header">Acciones:</h6> --}}
+            {{--             <a class="collapse-item" href="utilities-color.html">Agregar</a> --}}
+            {{--             <a class="collapse-item" href="utilities-border.html">Dar baja</a> --}}
+            {{--             <a class="collapse-item" href="utilities-animation.html">Actualizar</a> --}}
+            {{--             <a class="collapse-item" href="utilities-other.html">Ver activos</a> --}}
+            {{--         </div> --}}
+            {{--     </div> --}}
+            {{-- </li> --}}
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
@@ -130,56 +121,14 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Colors</a>
-                        <a class="collapse-item" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
+                        <a class="collapse-item" href="{{route('product.create')}}">Agregar Producto</a>
+                        <a class="collapse-item" href="{{route('product.index')}}">Ver Productos</a>
                     </div>
                 </div>
             </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
-
-            {{-- <!-- Heading --> --}}
-            {{-- <div class="sidebar-heading"> --}}
-            {{--     Addons --}}
-            {{-- </div> --}}
-
-            {{-- <!-- Nav Item - Pages Collapse Menu --> --}}
-            {{-- <li class="nav-item"> --}}
-            {{--     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" --}}
-            {{--         aria-expanded="true" aria-controls="collapsePages"> --}}
-            {{--         <i class="fas fa-fw fa-folder"></i> --}}
-            {{--         <span>Pages</span> --}}
-            {{--     </a> --}}
-            {{--     <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar"> --}}
-            {{--         <div class="bg-white py-2 collapse-inner rounded"> --}}
-            {{--             <h6 class="collapse-header">Login Screens:</h6> --}}
-            {{--             <a class="collapse-item" href="login.html">Login</a> --}}
-            {{--             <a class="collapse-item" href="register.html">Register</a> --}}
-            {{--             <a class="collapse-item" href="forgot-password.html">Forgot Password</a> --}}
-            {{--             <div class="collapse-divider"></div> --}}
-            {{--             <h6 class="collapse-header">Other Pages:</h6> --}}
-            {{--             <a class="collapse-item" href="404.html">404 Page</a> --}}
-            {{--             <a class="collapse-item" href="blank.html">Blank Page</a> --}}
-            {{--         </div> --}}
-            {{--     </div> --}}
-            {{-- </li> --}}
-
-            {{-- <!-- Nav Item - Charts --> --}}
-            {{-- <li class="nav-item"> --}}
-            {{--     <a class="nav-link" href="charts.html"> --}}
-            {{--         <i class="fas fa-fw fa-chart-area"></i> --}}
-            {{--         <span>Charts</span></a> --}}
-            {{-- </li> --}}
-
-            {{-- <!-- Nav Item - Tables --> --}}
-            {{-- <li class="nav-item"> --}}
-            {{--     <a class="nav-link" href="tables.html"> --}}
-            {{--         <i class="fas fa-fw fa-table"></i> --}}
-            {{--         <span>Tables</span></a> --}}
-            {{-- </li> --}}
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -188,19 +137,8 @@
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
-
-            <!-- Sidebar Message -->
-            {{-- <div class="sidebar-card d-none d-lg-flex">
-                <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
-                <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components,
-                    and more!</p>
-                <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to
-                    Pro!</a>
-            </div> --}}
-
         </ul>
         <!-- End of Sidebar -->
-
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
@@ -423,7 +361,7 @@
                     </div>
 
                     <!-- Content Row -->
-                    {{-- <div class="row">
+                     <div class="row">
 
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
@@ -432,11 +370,11 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Earnings (Monthly)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                                            <a class="btn btn-primary" href="{{route('product.create')}}">Agregar Producto</a>
+                                            </div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                            <i class="fas fa-solid fa-plus fa-3x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -508,7 +446,7 @@
                             </div>
                         </div>
                     </div>
- --}}
+ 
                     <!-- Content Row -->
 
                     <div class="row">
@@ -517,21 +455,6 @@
                                 <!-- Card Header - Dropdown -->
                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-secondary">Ordenes de (nombre)</h6>
-
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </div>
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">

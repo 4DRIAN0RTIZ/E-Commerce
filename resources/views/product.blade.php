@@ -31,8 +31,9 @@
             @foreach ($products as $item)
                 <div class="trending-item row">
                     <div class="col-md-6">
-                    <a href="detail/{{$item ['id']}}">
-                    <img class="trending-image" src="{{ $item['gallery'] }}" alt="Imagen">
+                    <a href="detail/{{$item->id}}">
+                    <img class="trending-image" src="{{ '/img/product/' . $item->gallery }}" alt="{{ $product->gallery }}"
+                height="100px">
                     <div class="">
                         <h5>{{ $item['name'] }}</h5>
 

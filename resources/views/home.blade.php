@@ -5,7 +5,7 @@
 				@foreach ($products as $item)
 					<div class="carousel-item {{ $item['id'] == 1 ? 'active' : '' }}">
 						<a href="detail/{{$item ['id']}}">
-							<img src="{{ $item ['gallery'] }}" class="slider-img" alt="...">
+							<img src="{{ '/img/product/' . $item->gallery }}" alt="{{ $item->gallery }}" class="slider-img" >
 							<div class="carousel-caption d-none d-md-block caption-bg">
 								<h5>{{ $item['name'] }}</h5>
 								<p> {{ $item['description'] }}</p>
@@ -27,16 +27,28 @@
 		<center><hr style="width: 50%; size: 3; color: black;"></center>
 		<div class="container">
 			 <div class="row">				 
-				 @foreach ($products as $item)
-				 	<div class="col-md-3">
-						 <a href=detail/{{$item['id']}}">
-								<img class="img-fluid" src="{{$item['gallery']}}" alt="Imagen">
-								<h5 class="nameP">{{ $item['name'] }}</h5>
-							 </a>
-					</div>
-				@endforeach
+				  @foreach ($products as $item)
+                    <div class="col-md-3">
+                    <a href="detail/{{$item->id}}">
+                    <img style="max-height: 120px; max-width: 200px ; size: cover;" class="img-fluid" src="{{ '/img/product/' . $item->gallery }}" alt="{{ $item->gallery }}"
+                height="100px">
+                    <div class="">
+                        <h5>{{ $item['name'] }}</h5>
+
+                    </div>
+                     </a>
+                </div>
+					@endforeach
+      </div>
+		</div>
+				 {{-- @foreach ($products as $item) --}}
+				 {{-- 	<div class="col-md-3"> --}}
+						 {{-- <a href=detail/{{$item['id']}}"> --}}
+								{{-- <img class="img-fluid" src="{{$item['gallery']}}" alt="Imagen"> --}}
+								{{-- <h5 class="nameP">{{ $item['name'] }}</h5> --}}
+							 {{-- </a> --}}
+					{{-- </div> --}}
+				{{-- @endforeach --}}
 				 </div>
 			 </div>
-		</div>
-	</div>
 @endsection

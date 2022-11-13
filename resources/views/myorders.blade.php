@@ -8,7 +8,7 @@
                     <div class=" row searched-item cart-list-divisor">
                         <div class="col-sm-3">
                             <a href="detail/{{ $item->id }}">
-                                <img class="trending-image" src="{{ $item->gallery }}" alt="Imagen">
+                                <img class="trending-image"  src="{{ '/img/product/' . $item->gallery }}" alt="{{ $item->gallery }}">
                             </a>
                         </div>
                         <div class="col-sm-3">
