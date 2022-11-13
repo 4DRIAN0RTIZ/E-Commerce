@@ -73,6 +73,8 @@ Route::get('/google-callback', function () {
 
     return redirect('/');
 });
+Route::view('/productedit','productedit')->name('productedit');
+Route::view('/productcreate','productcreate')->name('productcreate');
 Route::resource('product',ProductController::class);
 Route::view('/prueba','prueba');
 Route::view('/dashboard','dashboard');
@@ -89,7 +91,7 @@ Route::get("removecart/{id}",[ProductController::class,'removeCart']);
 Route::get("/ordernow",[ProductController::class,'orderNow']);
 Route::post("/orderplace",[ProductController::class,'orderPlace'])->name('orderplace');
 Route::get("/myorders",[ProductController::class,'myOrder']);
-Route::get("pdfreport",[ProductController::class,'Print']);
+Route::get("/pdfreport",[ProductController::class,'Print'])->name('pdfreport');
 
 /* Route::get('payment', [PayPalController::class, 'payment'])->name('payment'); */
 /* Route::get('cancel', [PayPalController::class, 'cancel'])->name('payment.cancel'); */

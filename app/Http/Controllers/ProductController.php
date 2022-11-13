@@ -24,35 +24,69 @@ class ProductController extends Controller
     }
 
     public function create(){
-        return view('product-create');
+        return view('productcreate');
     }
 
 public function store(Request $req)
     {
         $product = new Product();
 
-        $product->nombre = $req->nombre;
-        $product->descripcion = $req->descripcion;
-        $product->marca = $req->marca;
-        $product->precio = $req->precio;
-        $product->existencia = $req->existencia;
-        $product->status = $req->status;
-        if ($req->hasfile('imagen')) {
-            $imagen         = $req->file('imagen');
-            $nombreimagen   = Str::slug($req->id . '_' . $req->nombre . '_' . $req->marca) . "." . $imagen->guessExtension();
+        $product->name = $req->name;
+        $product->description = $req->description;
+        $product->category = $req->category;
+        $product->price = $req->price;
+        if ($req->hasfile('gallery')) {
+            $imagen         = $req->file('gallery');
+            $nombreimagen   = Str::slug($req->id . '_' . $req->name . '_' . $req->name) . "." . $imagen->guessExtension();
             //$nombreimagen = $imagen->getClientOriginalName();
             $ruta           = public_path("img/product/");
             $imagen->move($ruta, $nombreimagen);
 
-            $product->imagen = $nombreimagen;
+            $product->gallery = $nombreimagen;
         } else {
-            $product->imagen = $req->imagenactual;
+            $product->gallery = $req->imagenactual;
         }
 
 
         $product->save();
 
-        return view('ProductIndex')->with('products', Product::all())->with('mensaje', "Producto Añadido");
+        return view('/home')->with('products', Product::all())->with('mensaje', "Producto Añadido");
+}
+    public function show($id)
+    {
+        $product = Product::find($id);
+        return view('Product.show')->with('product', $product);
+    }
+
+     public function edit($id)
+    {
+        $product = Product::find($id);
+        return view('productedit')->with('product', $product);
+    }
+
+    public function update(Request $req, $id)
+    {
+        $product = Product::find($id);
+
+        $product->name = $req->name;
+        $product->description = $req->description;
+        $product->category = $req->category;
+        $product->price = $req->price;
+        if ($req->hasfile('gallery')) {
+            $imagen         = $req->file('gallery');
+            $nombreimagen   = Str::slug($req->id . '_' . $req->nombre . '_' . $req->marca) . "." . $imagen->guessExtension();
+            //$nombreimagen = $imagen->getClientOriginalName();
+            $ruta           = public_path("img/product/");
+            $imagen->move($ruta, $nombreimagen);
+
+            $product->gallery = $nombreimagen;
+        } else {
+            $product->gallery = $req->imagenactual;
+        }
+
+        $product->save();
+
+        return view('productindex')->with('products', Product::all())->with('mensaje', "Producto Actualizado");
     }
 
     function detail($id)
