@@ -123,7 +123,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Utilities:</h6>
                         <a class="collapse-item" href="{{route('product.create')}}">Agregar Producto</a>
-                        <a class="collapse-item" href="{{url('productindex')}}">Ver Productos</a>
+                        <a class="collapse-item" href="{{route('product.index')}}">Ver Productos</a>
                     </div>
                 </div>
             </li>

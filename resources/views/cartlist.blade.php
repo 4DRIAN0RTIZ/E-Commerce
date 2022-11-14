@@ -9,7 +9,7 @@
                     <div class="row mt-2 searched-item cart-list-divisor">
                         <div class="col-sm-3">
                             <a href="detail/{{ $item->id }}">
-                                <img class="img-fluid" src="{{ $item->gallery }}" alt="Imagen">
+                                <img class="img-fluid" src="{{ '/img/product/' . $item->gallery }}" >
                             </a>
                         </div>
                         <div class="col-sm-6">
